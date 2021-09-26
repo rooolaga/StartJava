@@ -11,13 +11,13 @@ public class Cycle {
             i += 2;
         }
 
-        int j = 10;
-        int sum = 0;
+        int j = 11;
+        int sumOdd = 0;
         do {
-            sum += j;
-            j++;
-        } while (j <= 20);
+            sumOdd += j;
+            j += 2;
+        } while (j <= 19);
 
-        System.out.println(sum);
+        System.out.println(sumOdd);
     }
 }
