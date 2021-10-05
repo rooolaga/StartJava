@@ -1,4 +1,4 @@
-package Jaeger;
+package jaeger;
 
 public class JaegerTest {
 
@@ -15,17 +15,7 @@ public class JaegerTest {
         System.out.print("Model: " + crimsonTyphoon.getModelName() + ", Name: " + crimsonTyphoon.getMark() + ", Action: ");
         crimsonTyphoon.move();
 
-
-        Jaeger strikerEureka = new Jaeger(
-                "Striker Eureka",
-                "Mark-5",
-                "Australia",
-                250,
-                1.850f,
-                10,
-                10,
-                9);
-
+        Jaeger strikerEureka = new Jaeger("Striker Eureka", "Mark-5", "Australia", 250, 1.850f, 10, 10, 9);
         System.out.print("Model: " + strikerEureka.getModelName() + ", Name: " + strikerEureka.getMark() + ", Action: " + strikerEureka.scanKaiju());
     }
 }

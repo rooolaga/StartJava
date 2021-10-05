@@ -1,4 +1,4 @@
-package Calculator;
+package calculator;
 
 import java.util.Scanner;
 
@@ -17,8 +17,10 @@ public class CalculatorTest {
             calculator.setSecondNumber(scanner.nextInt());
             calculator.calculate();
 
-            System.out.println("Хотите продолжить вычисления? [yes/no]:");
-            wantContinue = scanner.next();
+            do {
+                System.out.print("Хотите продолжить игру? [yes/no]:");
+                wantContinue = scanner.next();
+            } while (!wantContinue.equals("yes") && !wantContinue.equals("no"));
         } while (wantContinue.equals("yes"));
     }
 }

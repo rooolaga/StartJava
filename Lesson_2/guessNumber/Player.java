@@ -1,4 +1,4 @@
-package GuessNumber;
+package guessNumber;
 
 public class Player {
     private String name;

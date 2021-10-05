@@ -1,4 +1,4 @@
-package GuessNumber;
+package guessNumber;
 
 import java.util.Scanner;
 
@@ -10,8 +10,14 @@ public class GuessNumberTest {
         Player firstPlayer = new Player(scanner.next());
         System.out.print("Введите имя второго игрока ");
         Player secondPlayer = new Player(scanner.next());
-
         GuessNumber guessNumber = new GuessNumber(firstPlayer, secondPlayer);
-        guessNumber.startGame(scanner);
+        String wantContinue = "yes";
+        do {
+            guessNumber.start();
+            do {
+                System.out.print("Хотите продолжить игру? [yes/no]:");
+                wantContinue = scanner.next();
+            } while (!wantContinue.equals("yes") && !wantContinue.equals("no"));
+        } while (!wantContinue.equals("no"));
     }
 }

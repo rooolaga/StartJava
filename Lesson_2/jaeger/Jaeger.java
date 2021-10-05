@@ -1,4 +1,4 @@
-package Jaeger;
+package jaeger;
 
 public class Jaeger {
     private String modelName;
@@ -10,8 +10,7 @@ public class Jaeger {
     private int strength;
     private int armor;
 
-    public Jaeger(){
-
+    public Jaeger() {
     }
 
     public Jaeger(String modelName, String mark, String origin, float height, float weight, int speed, int strength, int armor) {

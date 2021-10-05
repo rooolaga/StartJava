@@ -31,11 +31,7 @@ public class Wolf {
     }
 
     public void setGender(String gender) {
-        if (this.age > 8) {
-            System.out.println("Некорректный возраст");
-        } else {
-            this.gender = gender;
-        }
+        this.gender = gender;
     }
 
     public String getName() {
@@ -67,6 +63,10 @@ public class Wolf {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age > 8) {
+            System.out.println("Некорректный возраст");
+        } else {
+            this.age = age;
+        }
     }
 }

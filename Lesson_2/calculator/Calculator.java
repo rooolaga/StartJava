@@ -1,4 +1,4 @@
-package Calculator;
+package calculator;
 
 public class Calculator {
     private int firstNumber;
@@ -19,28 +19,28 @@ public class Calculator {
 
     public void calculate() {
         System.out.print("Ответ: ");
-        switch (this.operator) {
+        switch (operator) {
             case '+':
-                System.out.println(this.firstNumber + this.secondNumber);
+                System.out.println(firstNumber + secondNumber);
                 break;
             case '-':
-                System.out.println(this.firstNumber - this.secondNumber);
+                System.out.println(firstNumber - secondNumber);
                 break;
             case '*':
-                System.out.println(this.firstNumber * this.secondNumber);
+                System.out.println(firstNumber * secondNumber);
                 break;
             case '/':
-                System.out.println(this.firstNumber / this.secondNumber);
+                System.out.println(firstNumber / secondNumber);
                 break;
             case '^':
                 int powResult = 1;
-                for (int i = 1; i <= this.secondNumber; i++) {
-                    powResult *= this.firstNumber;
+                for (int i = 1; i <= secondNumber; i++) {
+                    powResult *= firstNumber;
                 }
                 System.out.println(powResult);
                 break;
             case '%':
-                System.out.println(this.firstNumber % this.secondNumber);
+                System.out.println(firstNumber % secondNumber);
                 break;
             default:
                 System.out.println("Упс, оператор введен неверно");
