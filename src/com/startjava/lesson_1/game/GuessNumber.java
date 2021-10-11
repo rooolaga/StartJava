@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.game;
+
 public class GuessNumber {
     public static void main(String[] args) {
         int computerNumber = (int) (Math.random() * 100 + 1);
