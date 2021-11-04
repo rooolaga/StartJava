@@ -9,17 +9,16 @@ public class CalculatorTest {
         String wantContinue;
 
         do {
-            System.out.print("Введите первое число: ");
-            calculator.setFirstNumber(scanner.nextInt());
-            System.out.print("Введите знак математической операции: ");
-            calculator.setOperator(scanner.next().charAt(0));
-            System.out.print("Введите второе число: ");
-            calculator.setSecondNumber(scanner.nextInt());
-            calculator.calculate();
+            System.out.print("Введите математическое выражение: ");
+            String [] inputArr = scanner.nextLine().split(" ");
+            calculator.setFirstNumber(Integer.parseInt(inputArr[0]));
+            calculator.setOperator(inputArr[1].charAt(0));
+            calculator.setSecondNumber(Integer.parseInt(inputArr[2]));
+            System.out.println("Ответ: " + calculator.calculate());
 
             do {
-                System.out.print("Хотите продолжить игру? [yes/no]:");
-                wantContinue = scanner.next();
+                System.out.print("Хотите продолжить игру? [yes/no]: ");
+                wantContinue = scanner.nextLine();
             } while (!wantContinue.equals("yes") && !wantContinue.equals("no"));
         } while (wantContinue.equals("yes"));
     }

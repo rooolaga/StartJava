@@ -17,33 +17,22 @@ public class Calculator {
         this.operator = operator;
     }
 
-    public void calculate() {
-        System.out.print("Ответ: ");
+    public int calculate() {
         switch (operator) {
             case '+':
-                System.out.println(firstNumber + secondNumber);
-                break;
+                return firstNumber + secondNumber;
             case '-':
-                System.out.println(firstNumber - secondNumber);
-                break;
+                return firstNumber - secondNumber;
             case '*':
-                System.out.println(firstNumber * secondNumber);
-                break;
+                return firstNumber * secondNumber;
             case '/':
-                System.out.println(firstNumber / secondNumber);
-                break;
+                return firstNumber / secondNumber;
             case '^':
-                int powResult = 1;
-                for (int i = 1; i <= secondNumber; i++) {
-                    powResult *= firstNumber;
-                }
-                System.out.println(powResult);
-                break;
+                return (int) Math.pow(firstNumber, secondNumber);
             case '%':
-                System.out.println(firstNumber % secondNumber);
-                break;
+                return firstNumber % secondNumber;
             default:
-                System.out.println("Упс, оператор введен неверно");
+                return 0;
         }
     }
 }
