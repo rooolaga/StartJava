@@ -1,20 +1,15 @@
-package com.startjava.lesson_2_3.calculator;
+package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
     private int firstNumber;
     private int secondNumber;
     private char operator;
 
-    public void setFirstNumber(int firstNumber) {
-        this.firstNumber = firstNumber;
-    }
-
-    public void setSecondNumber(int secondNumber) {
-        this.secondNumber = secondNumber;
-    }
-
-    public void setOperator(char operator) {
-        this.operator = operator;
+    public Calculator(String mathExpression) {
+        String[] expressionParts = mathExpression.split(" ");
+        firstNumber = Integer.parseInt(expressionParts[0]);
+        operator = expressionParts[1].charAt(0);
+        secondNumber = Integer.parseInt(expressionParts[2]);
     }
 
     public int calculate() {

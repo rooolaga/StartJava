@@ -1,4 +1,4 @@
-package com.startjava.lesson_2_3.game;
+package com.startjava.lesson_2_3_4.game;
 
 import java.util.Arrays;
 
@@ -28,17 +28,12 @@ public class Player {
         return attempts[attemptsCounter - 1];
     }
 
-    public void printAttempts() {
-        int[] attempts = Arrays.copyOf(this.attempts, getAttemptsCounter());
-        System.out.print("Попытки игрока " + name + " ");
-        for (int i = 0; i < attempts.length; i++) {
-            System.out.print(attempts[i] + " ");
-        }
-        System.out.println();
+    public int[] getAttempts() {
+        return attempts;
     }
 
     public void clearAttempts() {
         attemptsCounter = 0;
-        Arrays.fill(attempts, 0, getAttemptsCounter(), 0);
+        Arrays.fill(attempts, 0, attemptsCounter, 0);
     }
 }

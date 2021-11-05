@@ -1,19 +1,15 @@
-package com.startjava.lesson_2_3.calculator;
+package com.startjava.lesson_2_3_4.calculator;
 
 import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Calculator calculator = new Calculator();
         String wantContinue;
 
         do {
             System.out.print("Введите математическое выражение: ");
-            String [] inputArr = scanner.nextLine().split(" ");
-            calculator.setFirstNumber(Integer.parseInt(inputArr[0]));
-            calculator.setOperator(inputArr[1].charAt(0));
-            calculator.setSecondNumber(Integer.parseInt(inputArr[2]));
+            Calculator calculator = new Calculator(scanner.nextLine());
             System.out.println("Ответ: " + calculator.calculate());
 
             do {
