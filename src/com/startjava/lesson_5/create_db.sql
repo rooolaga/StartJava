@@ -1,7 +1,6 @@
 create database "Jaegers";
 
-create table Jaegers
-(
+create table Jaegers (
     id        integer primary key,
     modelName varchar(50),
     mark      varchar(50),
